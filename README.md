@@ -1,7 +1,3 @@
-# Awesome-Books
-# WorldDevCongress
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Awesome Books Project
 
 > Setup a new repository ready for deployment using best practices (linters) 
@@ -12,11 +8,6 @@
 - HTML
 - CSS
 - Javascript
-
-## Live Demo
-
-- https://sekoviper.github.io/Awesome-Books
-
 
 To get a local copy up and running follow these simple example steps.
 

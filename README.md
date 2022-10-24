@@ -14,7 +14,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 > Open git bash
 > git clone https://github.com/SekoViper/Awesome-Books.git
-> cd portfolio
+> cd Awesome-Books
 
 
 ## Authors

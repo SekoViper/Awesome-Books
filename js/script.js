@@ -20,3 +20,12 @@ function createCollection (book){
 collections.forEach(book => {
   createCollection(book);
 });
+
+form.addEventListener('submit', (event) => {
+  // prevent default behavior of form
+  event.preventDefault();
+  let book = { name: form["book-title"].value, author: form["book-author"].value };
+  collections.push(book);
+  localStorage.setItem('books-collection', JSON.stringify(collections));
+  createCollection(book);
+});

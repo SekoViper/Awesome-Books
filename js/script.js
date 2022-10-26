@@ -1,3 +1,51 @@
+const booksSection = document.getElementById('book-container');
+const addBookSection = document.getElementById('book-form');
+const contactSection = document.getElementById('contact-info');
+const navLinks = document.querySelectorAll('.menu-items li');
+const currentDateEl = document.getElementById('current-date');
+
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+};
+
+setInterval(() => {
+  currentDateEl.textContent = new Date(Date.now()).toLocaleDateString('en-US', options);
+}, 1000);
+
+function showComponent(componentId) {
+  switch (componentId) {
+    case 'book-container':
+      booksSection.classList.add('visible');
+      addBookSection.classList.remove('visible');
+      contactSection.classList.remove('visible');
+      break;
+    case 'book-form':
+      booksSection.classList.remove('visible');
+      addBookSection.classList.add('visible');
+      contactSection.classList.remove('visible');
+      break;
+    case 'contact-info':
+      booksSection.classList.remove('visible');
+      addBookSection.classList.remove('visible');
+      contactSection.classList.add('visible');
+      break;
+    default:
+      break;
+  }
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (ev) => {
+    const componentId = ev.target.getAttribute('showComponent');
+    showComponent(componentId);
+  });
+});
+
 class AwesomeBooks {
   constructor(bookContainer, form) {
     // check if the localStorage has a item

@@ -22,9 +22,9 @@ nav {
   position: fixed;
   width: 100%;
   padding: 1rem 2rem;
-  box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 5px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 2px 5px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 2px 5px 0 rgba(0, 0, 0, 0.75);
   z-index: 99;
   background-color: #fff;
 }
@@ -36,6 +36,7 @@ nav a {
 h1 {
   font-size: 2rem;
   padding: 3rem 0 3rem;
+  text-align: center;
 }
 
 .menu-items {
@@ -55,11 +56,12 @@ h1 {
 
 main {
   padding: 4rem 1rem;
+
+  /* height: calc(100vh - calc(3rem + 4.55rem)); */
 }
 
-.main-heading {
-  text-align: center;
-  padding: 3rem 0 3rem;
+.visible {
+  display: flex !important;
 }
 
 .timer {
@@ -68,17 +70,19 @@ main {
 }
 
 #contact-info {
+  display: flex;
+  flex-direction: column;
   padding: 0 2rem;
   width: 800px;
   margin: 0 auto;
 }
 
-#contact-info h1 {
-  text-align: center;
+#contact-info ul {
+  padding: 2rem 5rem;
 }
 
-#contact-info ul{
-  padding: 2rem 3rem;
+#contact-info p {
+  padding: 0 2rem;
 }
 
 input {
@@ -110,6 +114,11 @@ input[type="submit"] {
   background-color: #0e8a46;
   width: 70px;
   margin-left: auto;
+}
+
+#book-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #book-detail {
@@ -166,4 +175,10 @@ form {
 footer {
   background-color: #ddd;
   padding: 3rem;
+}
+
+#book-container,
+#contact-info,
+#book-form {
+  display: none;
 }

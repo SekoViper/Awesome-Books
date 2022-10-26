@@ -19,28 +19,29 @@
         </div>
         <div class="menu">
           <ul class="menu-items">
-            <li><a href="#">List</a></li>
-            <li><a href="#">Add New</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" showComponent="book-container">List</a></li>
+            <li><a href="#" showComponent="book-form">Add New</a></li>
+            <li><a href="#" showComponent="contact-info">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main>
       <div class="timer">
-        <p>26th October 2022, 10:00am</p>
-      </div>
-      <div class="main-heading">
-        <h1>All Awesome Books</h1>
+        <p id="current-date"></p>
       </div>
       
-      <section id="book-detail">
-        <!-- books container -->
+      <section id="book-container" class="visible">
+        <h1>All Awesome Books</h1>
+        <div id="book-detail">
+          <!-- books container -->
+        </div>
       </section>
       
       <section id="contact-info">
         <h1>Contact Info</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ipsum ut architecto aliquam nisi deleniti inventore quis ex voluptates!</p>
+        <p>Do you any questions or you just want to say "hello"?</p>
+        <p>You can reach out to us!</p>
         <ul>
           <li>Our Email: we@gmail.com</li>
           <li>Our Phone Number: +233 2493 20950</li>
@@ -48,7 +49,7 @@
         </ul>
       </section>
 
-      <section id="book-form" class="main-heading">
+      <section id="book-form">
         <h1>Add new Book</h1>
         <form action="">
           <input

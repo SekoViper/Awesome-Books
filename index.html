@@ -13,14 +13,44 @@
   </head>
   <body>
     <header>
-      <h1>All Awesome Books</h1>
+      <nav>
+        <div class="logo">
+          <a href="/">Awesome Books</a>
+        </div>
+        <div class="menu">
+          <ul class="menu-items">
+            <li><a href="#" showComponent="book-container">List</a></li>
+            <li><a href="#" showComponent="book-form">Add New</a></li>
+            <li><a href="#" showComponent="contact-info">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
-      <section id="book-detail">
-        <!-- books container -->
+      <div class="timer">
+        <p id="current-date"></p>
+      </div>
+      
+      <section id="book-container" class="visible">
+        <h1>All Awesome Books</h1>
+        <div id="book-detail">
+          <!-- books container -->
+        </div>
       </section>
+      
+      <section id="contact-info">
+        <h1>Contact Info</h1>
+        <p>Do you any questions or you just want to say "hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul>
+          <li>Our Email: we@gmail.com</li>
+          <li>Our Phone Number: +233 2493 20950</li>
+          <li>Our Address: Community 10 Sos Street.</li>
+        </ul>
+      </section>
+
       <section id="book-form">
-        <h2>Add new Book</h2>
+        <h1>Add new Book</h1>
         <form action="">
           <input
             type="text"
@@ -38,6 +68,9 @@
         </form>
       </section>
     </main>
+    <footer>
+      <p>copyright</p>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
